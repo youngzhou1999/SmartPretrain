@@ -1,6 +1,6 @@
 # SmartPretrain: Model-Agnostic and Dataset-Agnostic Representation Learning for Motion Prediction
 
-***“Unlock the Future of Motion Prediction with Scalable, Model-Agnostic, Data-Agnostic Innovation!”*** 
+***“Unlock the Future of Motion Prediction with Scalable, Model-Agnostic, Dataset-Agnostic Innovation!”*** 
 
 ![pipeline](assets/pipeline.jpg)
 
