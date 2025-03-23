@@ -40,7 +40,7 @@ We present visualization results to demonstrate the effectiveness of our method.
 
 ## 1. Preparation
 
-We first need to prepare the environment and dataset for evaluation and training. You can simply follow [QCNet's official repository](https://github.com/ZikangZhou/QCNet) to install necessary dependencies as this code is based on QCNet.
+We first need to prepare the environment for evaluation and training. You can simply follow [QCNet's official repository](https://github.com/ZikangZhou/QCNet) to install necessary dependencies as this code is based on QCNet.
 
 ## 2. Evaluation with Our Fine-Tuned Model Checkpoints
 
@@ -69,7 +69,7 @@ You can also do fine-tuning with our pre-trained model. First, download our pre-
 | Argo2                  | [model](https://huggingface.co/preview-bot/SmartPretrain-preview/blob/main/QCNet-p_1.ckpt) |
 | Argo, Argo2 and WOMD   | [model](https://huggingface.co/preview-bot/SmartPretrain-preview/blob/main/QCNet-p_3.ckpt) |
 
-After finishing downloading, replace `ckpt` in `train.sh` with your downloaded model path and run the following script to fine-tune on the Argo2 training set:
+After finishing downloading, replace `pretrained_ckpt` in `train.sh` with your downloaded model path and run the following script to fine-tune on the Argo2 training set:
 
 ```bash
 bash train.sh
@@ -86,8 +86,6 @@ bash train_ssl.sh
 The loss in the pre-training phase decays from around 20 to 1 in a normal setting.
 
 ## Todo List
-
-- [ ] Pretext tasks interface of SmartPretrain
 - [ ] Support Argo pre-training
 - [ ] support Waymo pre-training
 
@@ -107,6 +105,10 @@ year={2025},
 url={https://openreview.net/forum?id=Bmzv2Gch9v}
 }
 ```
+
+## Acknowledgements
+
+We sincerely thank [Zikang Zhou](https://zikangzhou.github.io/) for providing the wonderful QCNet codebase.
 
 ## License
 
