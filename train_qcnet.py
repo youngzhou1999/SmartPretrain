@@ -26,7 +26,7 @@ import os
 
 def remove_prefix_if_needed(weight_dict, key, copy_refine=1):
     """
-    Processes a weight dictionary by removing 'momentum_local_encoder' and submodule
+    Processes a weight dictionary by removing 'momentum_branch' and submodule
     prefixes, adjusts specific embeddings, and optionally copies weights for refinement layers.
 
     Args:
@@ -41,10 +41,10 @@ def remove_prefix_if_needed(weight_dict, key, copy_refine=1):
     new_weight_dict = OrderedDict()  # Resulting cleaned weights
 
     for k, v in weight_dict.items():
-        # Process only keys that start with 'momentum_local_encoder'
-        if k.startswith('momentum_local_encoder'):
-            # Strip the 'momentum_local_encoder.' prefix
-            new_k = k.replace('momentum_local_encoder' + '.', '', 1)
+        # Process only keys that start with 'momentum_branch'
+        if k.startswith('momentum_branch'):
+            # Strip the 'momentum_branch.' prefix
+            new_k = k.replace('momentum_branch' + '.', '', 1)
 
             # Keep only entries that start with the given module key
             if new_k.startswith(key):
